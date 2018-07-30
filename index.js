@@ -31,7 +31,6 @@ class Neighborhood {
       return customer.mealId == this.id;
     });
   }
-  }
 }
 
 class Customer {
