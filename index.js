@@ -49,11 +49,9 @@ class Customer {
   }
   
   meals(){
-    const uniqueMeals = store.meals.filter(meal => {
-      return delivery.mealId == this.id;
+    return this.deliveries().map(delivery => {
+      return delivery.meal();
     });
-    
-    return [...new Set(uniqueMeals)]; 
   }
   
   totalSpent(){
