@@ -100,15 +100,23 @@ class Delivery {
     }
   }
   
-  meal() {
-    
+  meal(){
+    return store.meals.find(meal => {
+      return meal.id === this.mealId;
+    });
   }
   
-  customer() {
-    
+
+  customer(){
+    return store.customers.find(customer => {
+      return customer.id === this.customerId;
+    });
   }
-  
-  neighborhood() {
-    
+
+
+  neighborhood(){
+    return store.neighborhoods.find(neighborhood => {
+      return neighborhood.id === this.neighborhoodId
+    });
   }
 }
