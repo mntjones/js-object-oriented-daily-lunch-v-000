@@ -30,7 +30,8 @@ class Neighborhood {
    const uniqueMeals = this.deliveries().map(delivery => {
       return delivery.meal();
     });
-    
+    let unique = [...new Set(uniqueMeals)];
+    return unique;
   }
 }
 
