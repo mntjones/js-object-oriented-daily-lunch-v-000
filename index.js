@@ -53,7 +53,7 @@ class Customer {
       return delivery.mealId == this.id;
     });
     
-    return uniqueMeals
+    return [...new Set(uniqueMeals)]; 
   }
   
   totalSpent(){
