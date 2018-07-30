@@ -27,7 +27,10 @@ class Neighborhood {
   }
   
   meals(){ 
-  
+    return store.meals.filter(meal => {
+      return customer.mealId == this.id;
+    });
+  }
   }
 }
 
