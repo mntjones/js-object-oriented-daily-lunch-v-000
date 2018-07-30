@@ -27,7 +27,10 @@ class Neighborhood {
   }
   
   meals(){ 
-   
+   const uniqueMeals = this.deliveries().map(delivery => {
+      return delivery.meal();
+    });
+    
   }
 }
 
